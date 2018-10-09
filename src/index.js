@@ -1,9 +1,18 @@
-import React from "react"
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
-function Hi(){
-  return <div>Hello World!</div>;
-
+function Hi(props) {
+  return <div>Hello {props.name}!</div>;
 }
-
-ReactDOM.render(<Hi/>, document.querySelector('#root'));
+function HiFullName(props) {
+  return (
+    <div>
+      Hi {props.FirstName} {props.LastName}!
+    </div>
+  );
+}
+//ReactDOM.render(<Hi name="Dave" />, document.querySelector("#root"));
+ReactDOM.render(
+  <HiFullName FirstName="Dave" LastName="xyz" />,
+  document.querySelector("#root")
+);
