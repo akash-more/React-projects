@@ -1,1 +1,1 @@
-Simple Hello World! in React
+Simple Hello World! in Reactjs
