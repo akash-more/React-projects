@@ -1,20 +1,19 @@
-import React from "react"
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
-function Hi(){
-  return <div>Hello <strong>Akash!</strong>
-  <h4>How are you doing today?</h4>
-  <ol>
-      <li>Good</li>
-      <li>Bad</li>
-      <li>Great</li>
-  </ol>
-  Get the double of what you write in the  box below:
 
-  <br/><br/><input type = "number" placeholder="Enter a number"></input>
-    <br/><br/>Output = 
-  </div>;
-
+function Hi(props) {
+  return <div>Hello {props.name}!</div>;
 }
-
-ReactDOM.render(<Hi/>, document.querySelector('#root'));
+function HiFullName(props) {
+  return (
+    <div>
+      Hi {props.FirstName} {props.LastName}!
+    </div>
+  );
+}
+//ReactDOM.render(<Hi name="Dave" />, document.querySelector("#root"));
+ReactDOM.render(
+  <HiFullName FirstName="Dave" LastName="xyz" />,
+  document.querySelector("#root")
+);
